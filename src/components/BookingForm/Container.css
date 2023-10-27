@@ -1,0 +1,16 @@
+.MainContainer{
+    width: 100%;
+    height: 100%;
+    background-color: bisque;
+}
+.temp1{
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+}
+.temp2{
+    background-color: aquamarine;
+}
+.booked{
+    margin-top: 80px;
+}
