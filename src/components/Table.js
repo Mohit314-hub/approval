@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./table.css"; // Import your CSS file
 
 const Table = () => {
   const [requests, setRequests] = useState([
@@ -97,9 +96,6 @@ const Table = () => {
     }
   };
 
-  const addNewRequest = () => {
-    // Your add new request logic here
-  };
 
   return (
     <div className="table-container">
@@ -137,6 +133,7 @@ const Table = () => {
                       className="btn btn-success btn-sm"
                       onClick={() => handleAcceptClick(request.id)}
                       disabled={request.status !== "Pending"}
+                      style={{ marginRight: '5px' , marginLeft: '5px' }}
                     >
                       Accept
                     </button>
@@ -145,6 +142,7 @@ const Table = () => {
                       className="btn btn-danger btn-sm"
                       onClick={() => handleRejectClick(request.id)}
                       disabled={request.status !== "Pending"}
+                      style={{ marginLeft: '5px' }}
                     >
                       Reject
                     </button>
@@ -156,6 +154,7 @@ const Table = () => {
                       className="btn btn-primary btn-sm"
                       onClick={() => handleUndoApprovalClick(request.id)}
                       disabled={request.status !== "Accepted"}
+                      style={{ marginLeft: '5px' }}
                     >
                       Undo Approval
                     </button>
@@ -186,14 +185,6 @@ const Table = () => {
           Undo
         </button>
       )}
-
-      <button
-        type="button"
-        className="btn btn-primary"
-        onClick={addNewRequest}
-      >
-        Add New Request
-      </button>
     </div>
   );
 };

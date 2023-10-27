@@ -1,10 +1,9 @@
-
 import './App.css';
-import Middle from "./components/middle"
+import BookingApproval from './components/bookingApproval';
 function App() {
   return (
    <div>
-    <Middle/>
+    <BookingApproval/>
     </div>)
 }
 
