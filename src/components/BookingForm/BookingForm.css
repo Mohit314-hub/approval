@@ -1,12 +1,12 @@
 /* BookingForm.css */
 .form-container {
-    margin: -100px 0 0 0px;
-    width: 75%;
+    width: 95%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+    margin: 100px 0  30px 30px;
+    margin-top: 10%;
     height: 100%; /* Make the container full-height of the viewport */
   }
   

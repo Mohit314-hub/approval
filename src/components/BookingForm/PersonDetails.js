@@ -1,57 +1,67 @@
-import React from "react";
+import React, { useState } from "react";
 import "./PersonDetails.css"
+
 const PersonDetails = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [department, setDepartment] = useState("");
+  const [phNumber, setPhNumber] = useState("");
+  const [designation, setDesignation] = useState("");
+  const [address, setAddress] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // You can access the form values here and perform any necessary actions.
+    console.log({
+      firstName,
+      lastName,
+      email,
+      department,
+      phNumber,
+      designation,
+      address,
+    });
+  };
+
   return (
     <>
       <div className="person-container center-horizontal">
-        <form class="row g-3">
-          <h1 className="visitor-heading">
-            DETAILS OF PERSON MAKING THE BOOKING
-          </h1>
-          <div class="col-md-6">
-            <label for="firstName" class="form-label">
-              First Name
-            </label>
-            <input type="text" class="form-control" id="firstName" />
+        <form className="row g-3" onSubmit={handleSubmit}>
+          <h1 className="visitor-heading">DETAILS OF PERSON MAKING THE BOOKING</h1>
+          <div className="col-md-6">
+            <label htmlFor="firstName" className="form-label">First Name</label>
+            <input type="text" className="form-control" id="firstName" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
           </div>
-          <div class="col-md-6">
-            <label for="lastName" class="form-label">
-              Last Name
-            </label>
-            <input type="text" class="form-control" id="lastName" />
+          <div className="col-md-6">
+            <label htmlFor="lastName" className="form-label">Last Name</label>
+            <input type="text" className="form-control" id="lastName" value={lastName} onChange={(e) => setLastName(e.target.value)} />
           </div>
 
-          <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">
-              Email
-            </label>
-            <input type="email" class="form-control" id="inputEmail4" />
+          <div className="col-md-6">
+            <label htmlFor="inputEmail4" className="form-label">Email</label>
+            <input type="email" className="form-control" id="inputEmail4" value={email} onChange={(e) => setEmail(e.target.value)} />
           </div>
 
-          <div class="col-md-6">
-            <label for="department" class="form-label">
-              Department/Section/Center
-            </label>
-            <input type="text" class="form-control" id="department" />
+          <div className="col-md-6">
+            <label htmlFor="department" className="form-label">Department/Section/Center</label>
+            <input type="text" className="form-control" id="department" value={department} onChange={(e) => setDepartment(e.target.value)} />
           </div>
 
-          <div class="col-md-6">
-            <label for="phNumber" class="form-label">
-              Phone Number
-            </label>
-            <input type="text" class="form-control" id="phNumber" />
+          <div className="col-md-6">
+            <label htmlFor="phNumber" className="form-label">Phone Number</label>
+            <input type="text" className="form-control" id="phNumber" value={phNumber} onChange={(e) => setPhNumber(e.target.value)} />
           </div>
-          <div class="col-md-6">
-            <label for="designation" class="form-label">
-              Designation
-            </label>
-            <input type="text" class="form-control" id="designation" />
+          <div className="col-md-6">
+            <label htmlFor="designation" className="form-label">Designation</label>
+            <input type="text" className="form-control" id="designation" value={designation} onChange={(e) => setDesignation(e.target.value)} />
           </div>
-          <div class="col-12">
-            <label for="inputAddress" class="form-label">
-              Address
-            </label>
-            <input type="text" class="form-control" id="inputAddress" />
+          <div className="col-12">
+            <label htmlFor="inputAddress" className="form-label">Address</label>
+            <input type="text" className="form-control" id="inputAddress" value={address} onChange={(e) => setAddress(e.target.value)} />
+          </div>
+          <div className="col-12">
+            <button type="submit" className="btn btn-primary">Submit</button>
           </div>
         </form>
       </div>

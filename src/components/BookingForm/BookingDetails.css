@@ -1,3 +1,7 @@
+.details-container{
+    margin: 100px 0 0 30px;
+    margin-top: 25%;
+}
 .details{
     width: 25rem;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
@@ -5,6 +9,7 @@
 .gridContainer{
     font-size: 1.1rem;
     margin:10px 0 20px 0;
+
 }
 .text{
     font-size:1.1rem;
@@ -13,3 +18,4 @@
 .changeBtn{
     margin:0 0 15px 0;
 }
+
